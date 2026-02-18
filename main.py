@@ -9,8 +9,6 @@ app = FastAPI(title="Plataforma de Venta de Entradas")
 def health_check():
     return {"status": "ok"}
 
-app = FastAPI(title="Plataforma de Venta de Entradas")
-
 # En esencia, crea la API con los modelos en la BBDD, como una migration.
 @app.on_event("startup")
 def on_startup():
