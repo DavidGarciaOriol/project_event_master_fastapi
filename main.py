@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from sqlmodel import SQLModel
-from app.db import engine
-from app.routers import recintos
+from db import engine
+from routers import recintos
 
 app = FastAPI(title="Plataforma de Venta de Entradas")
 

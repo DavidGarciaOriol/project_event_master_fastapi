@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session, select
-from app.db import get_session
-from app.models import Recinto
-from app.schemas import CrearRecinto, LeerRecinto, ActualizacionRecinto
+from db import get_session
+from models import Recinto
+from schemas import CrearRecinto, LeerRecinto, ActualizacionRecinto
 
 router = APIRouter(prefix="/recintos", tags=["Recintos"])
 

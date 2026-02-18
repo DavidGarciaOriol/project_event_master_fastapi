@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlmodel import Session, select
-from app.db import get_session
-from app.models import Evento, Recinto
-from app.schemas import CrearEvento, LeerEvento
+from db import get_session
+from models import Evento, Recinto
+from schemas import CrearEvento, LeerEvento
 
 router = APIRouter(prefix="/eventos", tags=["eventos"])
 
