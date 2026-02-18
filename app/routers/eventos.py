@@ -26,7 +26,7 @@ def create_evento(evento: CrearEvento, session: Session = Depends(get_session)):
     
     return new_evento
 
-# Listar eventoos
+# Listar eventos
 @router.get("/", response_model=list[LeerEvento])
 def get_eventos(ciudad: str | None = Query(default=None), session: Session = Depends(get_session)):
     
