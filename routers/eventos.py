@@ -6,7 +6,7 @@ from schemas import CrearEvento, LeerEvento
 
 router = APIRouter(prefix="/eventos", tags=["eventos"])
 
-# Crear eventoos
+# Crear eventos
 @router.post("/", response_model=LeerEvento)
 def create_evento(evento: CrearEvento, session: Session = Depends(get_session)):
     

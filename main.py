@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from sqlmodel import SQLModel
 from db import engine
-from routers import recintos
+from routers import recintos, eventos
 
 app = FastAPI(title="Plataforma de Venta de Entradas")
 
@@ -15,3 +15,4 @@ def on_startup():
     SQLModel.metadata.create_all(engine)
 
 app.include_router(recintos.router)
+app.include_router(eventos.router)
